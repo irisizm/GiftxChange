@@ -1,0 +1,127 @@
+/* Temel stiller */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  width: 400px;
+  max-width: 95vw;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  background: #333;
+  color: white;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  box-shadow: 0 0 8px #00ffc3;
+}
+
+.btn {
+  background: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #00d1a8;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.stock-info, .commission-info {
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+#error {
+  background: #ff4c4c;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+code {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  user-select: all;
+}
+
+#copyBtn {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+#copyBtn:hover {
+  background: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .container {
+    width: 95vw;
+    padding: 20px;
+  }
+}

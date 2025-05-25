@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kod Dönüştür - GiftXchange Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Kodunu Dönüştür</h1>
+
+    <form id="convertForm">
+      <div class="form-group">
+        <label for="from">Elindeki Kod Türü:</label>
+        <select id="from" required>
+          <option value="google_play">Google Play</option>
+          <option value="steam">Steam</option>
+          <option value="itunes">iTunes</option>
+          <option value="amazon">Amazon</option>
+          <option value="netflix">Netflix</option>
+          <option value="roblox">Roblox</option>
+          <option value="valorant">Valorant</option>
+          <option value="free_fire">Free Fire</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="to">Dönüştürmek İstediğin Kod Türü:</label>
+        <select id="to" required>
+          <option value="steam">Steam</option>
+          <option value="google_play">Google Play</option>
+          <option value="netflix">Netflix</option>
+          <option value="amazon">Amazon</option>
+          <option value="itunes">iTunes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Miktar (₺):</label>
+        <input type="number" id="amount" min="10" max="5000" required />
+      </div>
+
+      <div class="form-group">
+        <label for="code">Kod (Örn: XXXX-XXXX-XXXX):</label>
+        <input type="text" id="code" placeholder="Kodunu buraya gir" pattern="[A-Z0-9\-]{12,20}" required />
+      </div>
+
+      <div class="stock-info">
+        <p>Stok Durumu: <span id="stockCount">...</span></p>
+      </div>
+
+      <div class="commission-info">
+        <p>Komisyon: <span id="commissionPercent">5%</span></p>
+      </div>
+
+      <button type="submit" class="btn">Dönüştür</button>
+    </form>
+
+    <div id="loading" class="hidden">
+      <img src="assets/loading.gif" alt="Yükleniyor" />
+      <p>Kod doğrulanıyor, lütfen bekleyin...</p>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>🎉 Dönüştürme Başarılı!</h2>
+      <p>Yeni Kod: <code id="newCode"></code> <button id="copyBtn">Kopyala</button></p>
+      <p>Kod 5 dakika içerisinde kullanıma hazırdır.</p>
+      <button id="newConversion" class="btn">Yeni Dönüştürme</button>
+    </div>
+
+    <div id="error" class="hidden error-message"></div>
+  </div>
+</body>
+</html>
